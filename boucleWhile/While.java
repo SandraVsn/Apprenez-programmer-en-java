@@ -2,15 +2,18 @@ package boucleWhile;
 
 public class While {
     public static void main(String[] args) {
-        int i = randomNumber();
-        while (i < 90) {
-            i = randomNumber();
-            System.out.println(i);
+        // Boucle "While" : ne fera pas de push up
+        int pushUpGoal = 0;
+        while (pushUpGoal > 0) {
+            System.out.println("Push up!");
+            pushUpGoal -= 1;
         }
+        // Boucle "do/while" fera un push up quoi qu'il arrive au début avant de
+        // vérifier la condition
+        pushUpGoal = 0;
+        do {
+            System.out.println("Push up ???");
+            pushUpGoal -= 1;
+        } while (pushUpGoal > 0);
     }
-
-    static int randomNumber() {
-        return (int) ((Math.random() * ((100 - 1) + 1)) + 1);
-    }
-
 }
