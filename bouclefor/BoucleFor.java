@@ -1,15 +1,15 @@
 package bouclefor;
 
 public class BoucleFor {
-    static int[] myArray = new int[] { 7, 2, 4 };
-
     public static void main(String[] args) {
-        for (int i = 0; i < myArray.length; i++) {
-            bonjour(Integer.toString(i));
-        }
-    }
+        int[] myArray = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
 
-    static void bonjour(String nom) {
-        System.out.println("Bonjour " + nom + " !!");
+        for (int i = 0; i < myArray.length; i++) {
+            if (myArray[i] == 50) {
+                System.out.println("J’ai trouvé mon  " + myArray[i] + " !");
+                break;
+            }
+            System.out.println("J’en suis à " + myArray[i] + " ...");
+        }
     }
 }
